@@ -55,3 +55,7 @@ Install required packages using requirements.txt
 In order to use the training by yourself, you can use the train_and_evaluate.py file. Uncomment either the train() or eval() functions by calling them from **main()** and launch the training or evaluation.
 
 You can modify ecosystem parameters as well - rewards, penalties, amount of agents of each type etc.
+
+## CPU vs GPU training
+
+While training using GPU should be faster, you need to configure it yourself. On my system (R9 5900HS, RTX3080M, 32GB RAM) the CPU training proved to be around 50% faster but with proper CUDA configuration it's possible to make it much faster.
