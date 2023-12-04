@@ -1,0 +1,8 @@
+gymnasium>=0.29.1
+matplotlib>=3.7.1
+numpy>=1.23.4
+opencv_python>=4.7.0.72
+pettingzoo>=1.24.2
+stable_baselines3>=2.2.1
+SuperSuit==3.9.1
+torch>=2.1.1
