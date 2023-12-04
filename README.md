@@ -4,7 +4,7 @@
 
 This is a PettingZoo Parallel Environment made for training 2 rivaling agent types - prey feeding on plants and predators feeding on prey.
 
-By using the train_and_evaluate.py file you can train and see how the models perform. Change the parameters to whatever you wish. An actor-critic learning method is recommended, provided example uses PPO.
+By using the **train_and_evaluate.py** file you can train and see how the models perform. Change the parameters to whatever you wish. An actor-critic learning method is recommended, provided example uses PPO.
 A pre-trained model has been provided although it's functionality is limited.
 
 ## Action and Observation spaces
@@ -25,7 +25,7 @@ Due to limitations of StableBaselines3 in Parallel Environments, illegal action 
 
 ### Observation space
 
-Observation space is a Discrete(23) space with -1.0 to 1.0 range where the following observations are provided:
+Observation space is a Box(23,) space with -1.0 to 1.0 range where the following observations are provided:
 
 - Agent data:
   - Agent type (-1 for shark, 1 for fish)
@@ -39,7 +39,7 @@ Observation space is a Discrete(23) space with -1.0 to 1.0 range where the follo
 
 ## Training
 
-Training has been performed using the PPO algorithm provided by StableBaselines3 library. The model has been trained with the following parameters:
+Training has been performed using the PPO algorithm provided by **StableBaselines3** library. The model has been trained with the following parameters:
 
 - Learning rate: 1e-3
 - Gamma: 0.95
@@ -52,10 +52,10 @@ Results of training point to the issue of having a single model taking care of b
 
 Install required packages using requirements.txt
 
-In order to use the training by yourself, you can use the train_and_evaluate.py file. Uncomment either the train() or eval() functions by calling them from **main()** and launch the training or evaluation.
+In order to use the training by yourself, you can use the **train_and_evaluate.py** file. Uncomment either the **train()** or **eval()** functions by calling them from **main()** and launch the training or evaluation.
 
 You can modify ecosystem parameters as well - rewards, penalties, amount of agents of each type etc.
 
 ## CPU vs GPU training
 
-While training using GPU should be faster, you need to configure it yourself. On my system (R9 5900HS, RTX3080M, 32GB RAM) the CPU training proved to be around 50% faster but with proper CUDA configuration it's possible to make it much faster.
+While training using GPU should be faster, you need to configure it yourself. On my system (R9 5900HS, RTX3080M, 32GB RAM) the CPU training proved to be around 50% faster but with proper CUDA configuration it's possible to make it much faster. Training for 100 000 000 steps took around 4.5 hours.
