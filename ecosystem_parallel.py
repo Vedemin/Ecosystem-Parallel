@@ -16,9 +16,6 @@ def env(render_mode=None):
     env = wrappers.OrderEnforcingWrapper(env)
     return env
 
-# ObsType = TypeVar("ObsType")
-# ActionType = TypeVar("ActionType")
-
 def raw_env(render_mode=None):
      env = parallel_env(render_mode=render_mode)
      env = parallel_to_aec(env)
@@ -107,9 +104,6 @@ class parallel_env(ParallelEnv):
     @functools.lru_cache(maxsize=None)
     def action_space(self, agent):
         return spaces.Discrete(7)
-    
-    def action_mask():
-        return spaces.Box(0, 1, (7,), int)
 
     def render(self):  # Simple OpenCV display of the environment
         image = self.toImage((400, 400))
