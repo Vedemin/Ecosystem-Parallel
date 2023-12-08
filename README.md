@@ -42,7 +42,7 @@ Observation space is a Box(23,) space with -1.0 to 1.0 range where the following
 Training has been performed using the PPO algorithm provided by **StableBaselines3** library. The model has been trained with the following parameters:
 
 - Learning rate: 1e-3
-- Gamma: 0.95
+- Gamma: 0.90
 - Steps: 100 000 000
 - Batch size: 256
 
